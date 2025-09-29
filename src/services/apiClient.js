@@ -1,7 +1,9 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL,
+  baseURL:
+    process.env.REACT_APP_API_BASE_URL ||
+    "https://68d40690214be68f8c68234e.mockapi.io",
   timeout: parseInt(process.env.REACT_APP_API_TIMEOUT) || 10000,
 });
 
